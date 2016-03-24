@@ -27,6 +27,8 @@ public:
 	void set(int, int);
 	void get(int &,int &);
 	~Time();
+
+   friend ostream& operator<<(ostream& os, const Time& time);
 };
 Time::Time(int hr, int min)
 {
@@ -42,10 +44,16 @@ void Time::get(int &hr, int &min)
 {
 	hr = hours;
 	min = minutes;
-}
+} 
 Time::~Time()
 {
 	
+}
+//2.2
+ostream& operator<<(ostream& os, const Time& time)
+{
+	os << time.hours << ':' << time.minutes;
+	return os;
 }
 // ***** DO NOT MODIFY CODE BELOW THIS LINE *****
 int main(int argc, char *argv[]) {
