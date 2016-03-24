@@ -1,8 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //                         COMPUTER METHODS 3 PRACTICAL TEST 1 (MOCK)
-// Name:
-// Student No:
-// Date: 
+// Name:Halalisile Mzobe
+// Student No:214519970
+// Date: 23/03/2016
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 
@@ -17,7 +17,36 @@ using namespace std;
 // 2.2  Overload the stream insertion operator for your class to print the time in format hh:mm 
 // 2.3  Overload the POSTFIX increment operator to increment the minutes (include carry if needed)
 
-
+class Time
+{
+private:
+	int hours;
+	int minutes;
+public:
+	Time(int, int);
+	void set(int, int);
+	void get(int &,int &);
+	~Time();
+};
+Time::Time(int hr, int min)
+{
+	hours = hr;
+	minutes = min;
+}
+void Time::set(int hr, int min)
+{
+	hours = hr;
+	minutes = min;
+}
+void Time::get(int &hr, int &min)
+{
+	hr = hours;
+	min = minutes;
+}
+Time::~Time()
+{
+	
+}
 // ***** DO NOT MODIFY CODE BELOW THIS LINE *****
 int main(int argc, char *argv[]) {
 
